@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HelloController!{% endblock %}
+
+ {% block sample %} Accueil | {{ block('title') }} {% endblock %}
+
+{% block body %}
+
+   Bonjour {{ thename }}
+
+   <p><a href="{{ path('app_hello', { name: 'hello' }) }}"> Link 1 </a></p>
+   <p><a href="{{ path('app_hello', { name: 'hello' }) }}"> Link 2 </a></p>
+
+    {% for a in ['a', 'b', 'c', 'd'] %}
+        <p>Char: {{ loop.index }}: {{ a }}</p>
+    {% endfor %}
+
+{% endblock %}
