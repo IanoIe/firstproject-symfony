@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Edit Product{% endblock %}
+
+{% block body %}
+
+<div class="mx-auto" style="width: 600px;">
+    <h1 class="mb-4">Edit Product</h1>
+
+    {{ form_start(form) }}
+    <p class="mb-3">
+        {{ form_label(form.title) }}
+        {{ form_widget(form.title) }}
+    </p>
+    <p class="mb-3">
+        {{ form_label(form.price) }}
+        {{ form_widget(form.price) }}
+    </p>
+    <p class="mb-3">
+        {{ form_label(form.category) }}
+        {{ form_widget(form.category) }}
+    </p>
+    <button type="submit" class="btn btn-primary py-1 px-2">Edit</button>
+    {{ form_end(form) }}
+</div>
+
+
+{% endblock %}
+
+

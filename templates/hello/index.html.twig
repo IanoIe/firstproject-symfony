@@ -15,4 +15,16 @@
         <p>Char: {{ loop.index }}: {{ a }}</p>
     {% endfor %}
 
+
+    <div {{ stimulus_controller('hello', { 'name': 'World', 'data': [1, 2, 3, 4] }) }}>
+        Hello
+    </div>
+
+    <!-- would render -->
+    <div
+       data-controller="hello"
+       data-hello-name-value="World"
+       data-hello-data-value="&#x5B;1,2,3,4&#x5D;">Hello</div>
+
+
 {% endblock %}
